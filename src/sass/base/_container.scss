@@ -6,11 +6,6 @@
   padding-left: 20px;
   //   background-color: pink;
 
-  // @include mq(mob) {
-  //   width: 480px;
-  //   // width: 448px;
-  // }
-
   @include mq(mob) {
     width: 320px;
   }
