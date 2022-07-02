@@ -2,28 +2,40 @@
   font-family: var(--title-font-family);
   font-size: 12px;
   line-height: 1.83;
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff 22%,
+    #fff5f6 22%,
+    #fff5f6 100%
+  );
   @include mq(tab) {
     font-size: 14px;
     line-height: 1.85;
+    background-image: linear-gradient(
+      to bottom,
+      #ffffff 45%,
+      #fff5f6 45%,
+      #fff5f6 100%
+    );
   }
-  @include mq(desc) {
+  @include mq(desk) {
     font-size: 16px;
     line-height: 1.87;
+    background-image: linear-gradient(
+      to bottom,
+      #ffffff 20%,
+      #fff5f6 20%,
+      #fff5f6 100%
+    );
   }
   &.section {
     padding-top: 0;
     padding-bottom: 40px;
-    // background-image: linear-gradient(
-    //   to bottom,
-    //   #ffffff 26%,
-    //   #fff5f6 26%,
-    //   #fff5f6 100%
-    // );
     @include mq(tab) {
       padding-top: 20px;
       padding-bottom: 60px;
     }
-    @include mq(desc) {
+    @include mq(desk) {
       padding-top: 60px;
       padding-bottom: 60px;
     }
@@ -46,7 +58,9 @@
   padding: 40px 32px;
   border-radius: 24px;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  @include mq(desc) {
+  background-color: var(--white-color);
+
+  @include mq(desk) {
     padding: 40px;
   }
 }
@@ -87,12 +101,16 @@
   }
 }
 .contacts-card__text {
+  font-size: 14px;
+
   line-height: 1.5;
   color: var(--text-color);
   @include mq(tab) {
     line-height: 1.64;
   }
-  @include mq(desc) {
+  @include mq(desk) {
+    max-width: 250px;
+    font-size: 16px;
     line-height: 1.81;
   }
 }
@@ -133,7 +151,7 @@
 .contact-card__address {
   line-height: 1.5;
   color: var(--text-color);
-  @include mq(desc) {
+  @include mq(desk) {
     line-height: 1.88;
   }
 }
