@@ -1,5 +1,44 @@
-<section class="section hero">
+<section class="hero general--wrap">
   <div class="container">
-    <h1 class="hero__title"> ice cream made with <span>passion</span></h1>
+    <h1 class="hero__title"> ice cream made with <span class='hero__title--accent'>passion</span></h1>
+<!--Ice Cream-->
+    <picture>
+      <source
+        srcset="./images/slider-d.png 1x,
+                                        ./images/slider-d.png 2x"
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="./images/slider-t.png 1x,
+                                        ./images/slider-t.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source srcset="./images/slider-m.png 1x,
+                                        ./images/slider-m.png 2x"
+              media="(min-width: 320px)"
+      />
+      <img src="./images/slider-d.png" alt="ноутбук">
+    </picture>
+<!--Ellipse-->
+    <picture>
+      <source
+        srcset="./images/Ellipse-d.png 1x,
+                                        ./images/Ellipse-d.png 2x"
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="./images/Ellipse-t.png 1x,
+                                        ./images/Ellipse-t.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source srcset="./images/Ellipse-m.png 1x,
+                                        ./images/Ellipse-m.png 2x"
+              media="(min-width: 320px)"
+      />
+      <img src="./images/Ellipse-d.png" alt="ноутбук">
+    </picture>
+
+    <a class='btn__link btn__link--pink' href=''>Products</a>
+   <a class='btn__link btn__link--white' href=''>How it’s made?</a>
   </div>
 </section>

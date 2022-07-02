@@ -1,8 +1,8 @@
-<header class='header'>
-  <div class='container header__container'>
+<header class='general--wrap'>
+  <div class='container header'>
     <nav class='header__nav'>
       <a class='logo' href='./index.html'>
-        <svg class='logo__icon' width='199' height='50'>
+        <svg class='logo__icon'>
           <use href='./images/symbol-defs.svg#icon-Group-1'></use>
         </svg>
       </a>
@@ -14,13 +14,16 @@
         <li class='nav__item'><a class='nav__link' href='#contact'>Contact</a></li>
       </ul>
     </nav>
-    <div>
+    <button type="button" class="mob-btn__open">
+      <svg class="mob-btn--open__menu" width="20" height="12">
+        <use href="./images/symbol-defs.svg#icon-Burger"></use>
+      </svg>
+    </button>
       <button class='btn__header' type="button">Buy now
       <svg class='btn__icon' width='4' height='8'>
         <use href='./images/symbol-defs.svg#icon-arrow'></use>
       </svg>
       </button>
-    </div>
   </div>
 
 </header>
