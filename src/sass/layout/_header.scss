@@ -1,18 +1,79 @@
-.header {
+.header{
+  background-color: var(--hero-bg-color);
+}
 
+.header__container {
+  display: flex;
+  align-items: center;
   @include mq(desk) {
-    outline: 1px solid tomato;
 
   }
 }
 
-.text-nav {
-  color: tomato;
+.header__nav {
+  @include mq(desk) {
+    display: flex;
+  }
+}
+
+.logo {
+  @include mq(desk) {
+    margin-right: 128px;
+  }
+}
+
+.nav {
+  display: none;
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+    font-family: var(--title-font-family);
+    color: var(--white-color);
+  }
+}
+
+.nav__link:focus,
+.nav__link:hover{
+  @include mq(desk){
+    color: var(--accent-color);
+  }
+}
+
+.nav__item:not(:last-child) {
+  @include mq(desk) {
+    margin-right: 35px;
+  }
+}
+
+.btn__header {
+  display: none;
 
   @include mq(tab) {
-    color: blueviolet;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding: 0;
+    min-width: 160px;
+    min-height: 44px;
+    font-family: var(--title-font-family);
+    background: var(--white-color);
+    color: var(--accent-color);
+    border-radius: 22px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3px;
   }
-  @include mq(desk) {
-    color: green;
+}
+
+.btn__header:hover,
+.btn__header:focus {
+  @include mq(tab){
+    background-color: var(--btn-hover-color);
   }
+}
+
+.btn__icon{
+  margin-left: 14px;
 }
