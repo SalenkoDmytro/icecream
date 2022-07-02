@@ -2,16 +2,18 @@
   font-family: var(--title-font-family);
   font-size: 12px;
   line-height: 1.83;
-  background-image: linear-gradient(
-    to bottom,
-    #ffffff 26%,
-    #fff5f6 26%,
-    #fff5f6 100%
-  );
-
   &.section {
     padding-bottom: 40px;
+    // background-image: linear-gradient(
+    //   to bottom,
+    //   #ffffff 26%,
+    //   #fff5f6 26%,
+    //   #fff5f6 100%
+    // );
   }
+}
+.contacts__card-set {
+  margin-bottom: 32px;
 }
 .contacts-card {
   padding: 40px 32px;
