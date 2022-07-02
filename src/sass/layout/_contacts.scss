@@ -137,3 +137,10 @@
     line-height: 1.88;
   }
 }
+.contact-card__link {
+  transition: color 250ms linear;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
