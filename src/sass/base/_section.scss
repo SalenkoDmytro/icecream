@@ -14,7 +14,7 @@
     line-height: 1.16;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     font-size: 58px;
     line-height: 1.14;
   }
