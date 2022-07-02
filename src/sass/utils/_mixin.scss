@@ -8,7 +8,7 @@
   $mobile: 320px;
   $fablet: 480px;
   $tablet: 768px;
-  $desctop: 1200px;
+  $desktop: 1200px;
   @if $val==mob {
     @media (min-width: $mobile) {
       @content;
@@ -30,15 +30,15 @@
       @content;
     }
   } @else if $val==tab-only {
-    @media (min-width:$tablet) and (max-width:#{$desctop - 0.02}) {
+    @media (min-width:$tablet) and (max-width:#{$desktop - 0.02}) {
       @content;
     }
-  } @else if $val==desc {
-    @media (min-width: $desctop) {
+  } @else if $val==desk {
+    @media (min-width: $desktop) {
       @content;
     }
-  } @else if $val==noDesc {
-    @media (max-width:#{$desctop - 0.02}) {
+  } @else if $val==noDesk {
+    @media (max-width:#{$desktop - 0.02}) {
       @content;
     }
   } @else if $val==retina {
