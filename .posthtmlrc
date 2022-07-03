@@ -3,5 +3,5 @@
     "posthtml-include": {
       "root": "./src"
     }
-  }
+  },
 }

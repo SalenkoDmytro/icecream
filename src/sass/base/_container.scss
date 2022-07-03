@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
-  //   background-color: pink;
 
   @include mq(mob) {
     width: 320px;
@@ -21,6 +20,7 @@
   }
 
   @include mq(desk) {
+    position: relative;
     padding-right: 16px;
     padding-left: 16px;
     width: 1200px;
