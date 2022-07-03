@@ -21,3 +21,39 @@
   letter-spacing: inherit;
   color: var(--title-text-color);
 }
+
+.btn__header {
+  display: none;
+
+  @include mq(tab) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 32px;
+    padding: 0;
+    min-width: 160px;
+    min-height: 44px;
+    font-family: var(--primary-font-family);
+    background: var(--white-color);
+    color: var(--accent-color);
+    border-radius: 22px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3px;
+  }
+  @include mq(desk) {
+    margin-left: auto;
+  }
+
+  &:hover,
+  &:focus {
+    @include mq(tab) {
+      background-color: var(--btn-hover-color);
+    }
+  }
+}
+
+.btn__icon {
+  margin-left: 14px;
+}

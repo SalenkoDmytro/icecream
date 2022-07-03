@@ -1,0 +1,26 @@
+.nav {
+  display: none;
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+    font-family: var(--primary-font-family);
+    color: var(--white-color);
+    margin-left: 128px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+  }
+
+  &__link:focus,
+  &__link:hover {
+    @include mq(desk) {
+      color: var(--accent-color);
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include mq(desk) {
+      margin-right: 35px;
+    }
+  }
+}
+
