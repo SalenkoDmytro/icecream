@@ -1,8 +1,20 @@
 .footer {
   background-color: #fff5f6;
-  padding-bottom: 10px;
+
   &.section {
     padding: 0;
+    padding-bottom: 10px;
+    @include mq(desk) {
+      padding-top: 60px;
+    }
+  }
+  & .container {
+    @include mq(tab) {
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
 }
 .footer__title {
@@ -13,15 +25,42 @@
   line-height: 1.16;
   color: var(--title-color);
   margin-bottom: 40px;
+  @include mq(tab) {
+    max-width: 340px;
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @include mq(desk) {
+    max-width: 100%;
+    margin-bottom: 60px;
+
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 .footer__title--red {
   display: block;
-  max-width: 200px;
   margin-top: 16px;
-
   font-size: 34px;
+  letter-spacing: 0.06em;
   line-height: 1.15;
   color: var(--accent-color);
+  @include mq(mob-only) {
+    max-width: 200px;
+  }
+  @include mq(tab-only) {
+    margin-top: 12px;
+    font-size: 48px;
+  }
+  @include mq(desk) {
+    font-size: 58px;
+    line-height: 1.13;
+  }
+}
+.footer__leftside {
+  @include mq(tab) {
+    margin-left: auto;
+  }
 }
 .footer__list {
   justify-content: end;
@@ -38,8 +77,17 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 1.38;
+  letter-spacing: 0.02em;
   text-align: right;
   color: var(--black-color);
+  @include mq(tab) {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  @include mq(desk) {
+    font-size: 16px;
+    line-height: 1.88;
+  }
 }
 .footer__contact {
   color: var(--accent-color);
@@ -50,14 +98,23 @@
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
+  letter-spacing: 0.02em;
   color: var(--text-color);
   &::before {
     content: '';
-
     display: block;
     height: 1px;
     margin-bottom: 16px;
     background-color: #e1e1e1;
+    @include mq(tab) {
+      margin-bottom: 8px;
+    }
+    @include mq(desk) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1170px;
+      line-height: 1.86;
+    }
   }
 }
 .footer__posttitle--bottomtext {
