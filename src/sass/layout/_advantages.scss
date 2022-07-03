@@ -1,0 +1,55 @@
+.advantages {
+  background: var(--second-br-color);
+}
+
+.advantages__title {
+  display: none;
+}
+
+.advantages__list {
+  --card-item: 3;
+}
+
+.advantages__item {
+  --gard-gap: 0;
+}
+
+.advantages__statistics {
+  width: 230px;
+  margin-bottom: 10px;
+  font-family: var(--title-font-family);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.138;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--accent-color);
+
+  @include mq(tab) {
+    width: 180px;
+    margin-bottom: 13px;
+
+    font-size: 48px;
+    line-height: 55px;
+  }
+
+  @include mq(desk) {
+    width: 288px;
+    margin-bottom: 16px;
+
+    font-size: 58px;
+    line-height: 66px;
+  }
+}
+
+.advantages__texst {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 170%;
+  /* or 20px */
+
+  color: #000000;
+}
