@@ -162,3 +162,59 @@
     color: var(--accent-color);
   }
 }
+.contacts__btns {
+  display: flex;
+  flex-direction: column;
+  @include mq(tab) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.contacts__btn {
+  display: flex;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  border-radius: 22px;
+  @include mq(mob-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include mq(fab-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include mq(tab) {
+    padding: 0 35px;
+  }
+
+  &.btn__link--pink {
+    margin-right: 0;
+  }
+  &.btn__link--white:hover,
+  &.btn__link--white:focus {
+    background-color: var(--btn-hover-color);
+  }
+  & + & {
+    @include mq(mob-only) {
+      margin-top: 10px;
+    }
+    @include mq(tab) {
+      margin-left: 12px;
+    }
+  }
+}
+.contacts__icon {
+  margin-left: 12px;
+  &--white {
+    @include mq(mob-only) {
+      margin-left: 8px;
+    }
+  }
+  @include mq(tab) {
+    margin-left: 14px;
+  }
+}

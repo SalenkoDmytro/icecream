@@ -71,6 +71,11 @@
 .footer__icon {
   display: flex;
   fill: #fea5bb;
+  transition: fill 250ms linear;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 .footer__text {
   margin-bottom: 40px;
