@@ -165,23 +165,23 @@
   position: absolute;
   z-index: 1;
   top: 92px;
-  //right: 32px;
-  right: 10%;
+  right: 32px;
+  //right: 10%;
   //left: 117px;
   width: 171px;
   height: 410px;
   @include mq(tab){
     top: 80px;
-    //right: 303px;
-    right: 39%;
+    right: 303px;
+    //right: 39%;
     //left: 322px;
     width: 143px;
     height: 336px;
   }
   @include mq(desk){
     top: 108px;
-    //right: 328px;
-    right: 27%;
+    right: 328px;
+    //right: 27%;
     //left: 636px;
     width: 236px;
     height: 557px;
@@ -192,21 +192,21 @@
 .hero--img__circle{
   position: absolute;
   top: 83px;
-  right: 0;
+  right: -20px;
   //left: 36px;
   height: 344px;
   @include mq(tab){
     top: 43px;
-    //right: 185px;
-    right: 24%;
+    right: 185px;
+    //right: 24%;
     //left: 248px;
     width: 335px;
     height: 333px;
   }
   @include mq(desk){
     top: 54px;
-    //right: 149px;
-    right: 12%;
+    right: 149px;
+    //right: 12%;
     //left: 517px;
     width: 534px;
     height: 534px;
