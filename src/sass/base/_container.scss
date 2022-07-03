@@ -20,7 +20,6 @@
   }
 
   @include mq(desk) {
-    position: relative;
     padding-right: 16px;
     padding-left: 16px;
     width: 1200px;
