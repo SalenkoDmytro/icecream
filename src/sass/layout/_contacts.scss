@@ -1,5 +1,5 @@
 .contacts {
-  font-family: var(--title-font-family);
+  font-family: var(--primary-font-family);
   font-size: 12px;
   line-height: 1.83;
   background-image: linear-gradient(
@@ -146,7 +146,7 @@
 }
 
 .contacts-card__time {
-  color: var(--title-cilor);
+  color: var(--title-color);
 }
 .contact-card__address {
   line-height: 1.5;
