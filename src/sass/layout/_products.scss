@@ -1,0 +1,49 @@
+.products {
+  padding: 60px 0;
+  text-align: center;
+
+  .products__list {
+    justify-content: center;
+
+    @include mq(tab) {
+      gap: 16px;
+    }
+  }
+
+  .products__item {
+    background-color: var(--hero-bg-color);
+    width: 280px;
+    min-height: 489px;
+    border-radius: 24px;
+
+    &:nth-child(2) {
+      background-color: var(--second-card-color);
+    }
+
+    &:nth-child(3) {
+      background-color: var(--third-card-color);
+    }
+
+    @include mq(tab) {
+      flex-basis: calc((100% - 48px) / 3);
+    }
+  }
+
+  .products__title {
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .products__text {
+    color: var(--white-color);
+    font-family: var(--title-font-family);
+    font-size: 14px;
+    padding: 0 40px;
+
+    @include mq(tab) {
+      padding: 0 32px;
+    }
+  }
+}
