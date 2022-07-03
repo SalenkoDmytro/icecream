@@ -1,0 +1,25 @@
+// .gallery {
+//   border-bottom: 1px solid black;
+//   padding: 0;
+//   padding-left: 5px;
+//   padding-right: 5px;
+
+//   height: 500px;
+
+//   background-image: linear-gradient(
+//     to bottom,
+//     #fff5f6 23%,
+//     #ffffff 23%,
+//     #ffffff
+//   );
+
+//   @include mq(desk) {
+//     padding-left: 94px;
+//     padding-right: 94px;
+//   }
+// }
+
+// .gallery__list {
+//   display: grid;
+//   grid-template-rows: 1fr auto;
+// }
