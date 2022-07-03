@@ -37,16 +37,6 @@
     '. . p8 . . . .';
 }
 
-// .gallery__item {
-//   width: 138px;
-//   height: 138px;
-// }
-
-// .gallery__item--xl {
-//   width: 283px;
-//   height: 283px;
-// }
-
 .gallery__item {
   &:nth-child(1) {
     grid-area: p1;
