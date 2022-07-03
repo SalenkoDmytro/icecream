@@ -130,7 +130,6 @@
   left: 152px;;
   width: 124px;
   margin-top: 61px;
-  //margin-left: 151px;
   font-weight: 400;
   font-size: 8px;
   line-height: 150%;
@@ -144,6 +143,23 @@
   }
 }
 
+.hero-arrow__link{
+  position: absolute;
+  top: 342px;
+  left: 152px;;
+  width: 18px;
+  margin-top: 7px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @include mq(desk){
+    top: 554px;
+    left: 213px;;
+    width: 26px;
+    margin-top: 20px;
+  }
+}
+
 //Ice Cream
 .hero--img__ice{
   position: absolute;
@@ -151,12 +167,14 @@
   top: 92px;
   //right: 32px;
   right: 10%;
+  //left: 117px;
   width: 171px;
   height: 410px;
   @include mq(tab){
     top: 80px;
     //right: 303px;
     right: 39%;
+    //left: 322px;
     width: 143px;
     height: 336px;
   }
@@ -164,6 +182,7 @@
     top: 108px;
     //right: 328px;
     right: 27%;
+    //left: 636px;
     width: 236px;
     height: 557px;
   }
@@ -174,11 +193,13 @@
   position: absolute;
   top: 83px;
   right: 0;
+  //left: 36px;
   height: 344px;
   @include mq(tab){
     top: 43px;
     //right: 185px;
     right: 24%;
+    //left: 248px;
     width: 335px;
     height: 333px;
   }
@@ -186,6 +207,7 @@
     top: 54px;
     //right: 149px;
     right: 12%;
+    //left: 517px;
     width: 534px;
     height: 534px;
   }
@@ -228,24 +250,49 @@
 }
 
 .number__position{
+  position: absolute;
+  z-index: 2;
+  top: 92px;
+  right: 7px;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @include mq(tab-only){
-    position: absolute;
-    z-index: 2;
-    top: 102px;
-    right: 0;
+  @include mq(desk){
+    top: 152px;
+    right: 15px;
   }
 }
 
-.circle-mini-desk{
+.img-one__small,
+.hero-two__small{
   position: absolute;
-  top: 152px;
   right: 0;
-  width: 30px;
-  height: 30px;
+  width: 16px;
+  height: 16px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @include mq(desk){
+    width: 30px;
+    height: 30px;
+  }
 }
+
+.img-one__small{
+  top: 90px;
+  @include mq(desk){
+    top: 149px;
+  }
+}
+
+.hero-two__small{
+  top: 150px;
+  @include mq(desk){
+    top: 236px;
+  }
+}
+
 
 .hero--img__woman{
   position: absolute;
