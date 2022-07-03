@@ -75,9 +75,6 @@
   @include mq(tab) {
     display: flex;
   }
-  &:first-child {
-    margin-right: 32px;
-  }
 }
 .about__img {
   margin-left: auto;

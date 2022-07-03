@@ -2,20 +2,26 @@
   background: var(--second-br-color);
 }
 
-.advantages__title {
-  display: none;
-}
-
 .advantages__list {
-  --card-item: 3;
-}
+  --card-gap: 10px;
 
-.advantages__item {
-  --gard-gap: 0;
+  @include mq(fab) {
+    --card-item: 2;
+    --card-gap: 26px;
+  }
+
+  @include mq(tab) {
+    --card-item: 3;
+    --card-gap: 32px;
+  }
+
+  @include mq(desk) {
+    --card-gap: 80px;
+  }
 }
 
 .advantages__statistics {
-  width: 230px;
+  width: 100px;
   margin-bottom: 10px;
   font-family: var(--title-font-family);
   font-weight: 400;
@@ -26,30 +32,53 @@
 
   color: var(--accent-color);
 
+  @include mq(fab) {
+    margin-bottom: 12px;
+
+    font-size: 40px;
+    line-height: 1.14;
+  }
+
   @include mq(tab) {
-    width: 180px;
     margin-bottom: 13px;
 
     font-size: 48px;
-    line-height: 55px;
+    line-height: 1.145;
   }
 
   @include mq(desk) {
-    width: 288px;
     margin-bottom: 16px;
 
     font-size: 58px;
-    line-height: 66px;
+    line-height: 1.137;
   }
 }
 
 .advantages__texst {
-  font-family: 'DM Sans';
-  font-style: normal;
+  width: 230px;
+  font-family: var(--primary-font-family);
   font-weight: 700;
   font-size: 12px;
-  line-height: 170%;
-  /* or 20px */
+  line-height: 1.66;
+  letter-spacing: 0;
 
-  color: #000000;
+  color: var(--black-color);
+
+  @include mq(fab) {
+    // width: 210px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  @include mq(tab) {
+    // width: 220px;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  @include mq(desk) {
+    // width: 288px;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+  }
 }
