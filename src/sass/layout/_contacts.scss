@@ -205,7 +205,7 @@
     @include mq(mob-only) {
       margin-top: 10px;
     }
-    @include mq(fab) {
+    @include mq(fab-only) {
       margin-top: 10px;
     }
     @include mq(tab) {
