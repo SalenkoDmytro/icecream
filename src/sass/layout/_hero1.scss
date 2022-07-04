@@ -1,21 +1,20 @@
 .hero__section {
   background-color: var(--hero-bg-color);
-  position: relative;
-  overflow: hidden;
-  height: 502px;
-  @include mq(tab) {
-    height: 416px;
-  }
-  @include mq(desk) {
-    height: 664px;
-  }
+  //height: 502px;
+  //@include mq(tab) {
+  //  height: 416px;
+  //}
+  //@include mq(desk) {
+  //  height: 664px;
+  //}
 }
 
 .hero__content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-top: 194px;
-  padding-bottom: 158px;
+  padding-bottom: 308px;
   @include mq(tab) {
     padding-top: 102px;
     padding-bottom: 188px;
@@ -118,16 +117,10 @@
   position: absolute;
   width: 346px;
   height: 344px;
-  top: 83px;
-  left: 36px;
-  background-image: url('../images/png/hero/circle-desk-1x.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  @include mq(desk){
-    width: 534px;
-    top: 83px;
-    left: 36px;
-  }
+  background-image: url(../images/png/hero/circle-desk-1x.png);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 //Ice Cream
@@ -135,8 +128,8 @@
   display: block;
   position: absolute;
   z-index: 1;
-  top: 9px;
-  left: 81px;
+  top: 92px;
+  left: 97px;
   width: 171px;
   height: 410px;
   @include mq(tab) {
@@ -146,8 +139,8 @@
     height: 336px;
   }
   @include mq(desk) {
-    top: 54px;
-    left: 119px;
+    top: 108px;
+    left: 620px;
     width: 236px;
     height: 557px;
   }
@@ -173,6 +166,13 @@
     height: 534px;
   }
 }
+
+
+
+
+
+
+
 
 .hero__box {
   @media screen and (max-width: 767px) {
