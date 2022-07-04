@@ -138,6 +138,11 @@
     margin-right: auto;
     position: relative;
   }
+  @include mq(fab) {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
   @include mq(tab) {
     margin-left: auto;
     margin-right: auto;
