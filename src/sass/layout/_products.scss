@@ -4,6 +4,8 @@
 
   .products__list {
     justify-content: center;
+    position: relative;
+    margin-top: 140px;
 
     @include mq(tab) {
       gap: 16px;
@@ -15,6 +17,8 @@
     width: 280px;
     min-height: 489px;
     border-radius: 24px;
+    position: relative;
+    margin-bottom: 140px;
 
     &:nth-child(2) {
       background-color: var(--second-card-color);
@@ -29,11 +33,22 @@
     }
   }
 
+  .products__item::before {
+    content: url(/src/images/webp/products/ice-cream-tab-1x.webp);
+    left: -50%;
+    transform: translateX(50%);
+    width: 280px;
+    position: absolute;
+    top: -115px;
+  }
+
   .products__title {
+    font-family: var(--primary-font-family);
     color: var(--white-color);
     font-weight: 400;
     font-size: 20px;
     margin-bottom: 20px;
+    margin-top: 140px;
   }
 
   .products__text {
@@ -45,5 +60,15 @@
     @include mq(tab) {
       padding: 0 32px;
     }
+  }
+
+  .products__btn {
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  .products__img {
+    width: 40px;
+    height: 40px;
   }
 }
