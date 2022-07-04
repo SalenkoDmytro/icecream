@@ -156,7 +156,7 @@
   }
 }
 .contact-card__link {
-  transition: color --transition;
+  transition: color var(--transition);
   &:hover,
   &:focus {
     color: var(--accent-color);
