@@ -1,0 +1,48 @@
+.locations__modal {
+  padding: 20px;
+}
+.locations__slide {
+  text-align: center;
+  @include mq(fab) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+.contacts-card__label.locations__label {
+  margin-bottom: 10px;
+}
+.locations__title {
+  color: var(--title-color);
+  @include mq(mob-only) {
+    margin-bottom: 20px;
+  }
+  @include mq(fab) {
+    display: flex;
+    align-items: baseline;
+    margin-left: auto;
+    flex-grow: 1;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/morozhenoye1x.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include mq(retina) {
+      background-image: url(../images/morozhenoye-2x.png);
+    }
+    @include mq(fab) {
+      margin-right: auto;
+    }
+  }
+}
+.locations__map {
+  width: 250px;
+}

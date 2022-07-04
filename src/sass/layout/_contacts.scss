@@ -156,7 +156,7 @@
   }
 }
 .contact-card__link {
-  transition: color 250ms linear;
+  transition: color var(--transition);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -203,6 +203,9 @@
   }
   & + & {
     @include mq(mob-only) {
+      margin-top: 10px;
+    }
+    @include mq(fab-only) {
       margin-top: 10px;
     }
     @include mq(tab) {
