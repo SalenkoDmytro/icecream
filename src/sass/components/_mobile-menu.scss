@@ -1,0 +1,10 @@
+.mob-btn__open {
+  background-color: transparent;
+  border: none;
+  display: block;
+  padding: 0;
+  margin-left: auto;
+  @include mq(desk) {
+    display: none;
+  }
+}

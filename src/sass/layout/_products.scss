@@ -2,73 +2,223 @@
   padding: 60px 0;
   text-align: center;
 
+  .products__pretitle {
+    font-family: var(--title-font-family);
+    color: var(--title-color);
+    font-size: 18px;
+
+    @include mq(desk) {
+      font-size: 26px;
+    }
+
+    @include mq(desk) {
+      font-size: 30px;
+    }
+  }
+
+  .section__title {
+    font-family: var(--title-font-family);
+    color: var(--accent-color);
+    font-size: 34px;
+
+    @include mq(tab) {
+      font-size: 48px;
+    }
+
+    @include mq(desk) {
+      font-size: 58px;
+    }
+  }
   .products__list {
     justify-content: center;
     position: relative;
-    margin-top: 140px;
+    margin-top: 148px;
+    --card-item: 1;
+    --card-gap: 0;
 
     @include mq(tab) {
-      gap: 16px;
+      --card-gap: 16px;
+      --card-item: 3;
+      margin-top: 160px;
+    }
+
+    @include mq(desk) {
+      --card-gap: 32px;
+      margin-top: 280px;
     }
   }
 
   .products__item {
     background-color: var(--hero-bg-color);
     width: 280px;
-    min-height: 489px;
     border-radius: 24px;
     position: relative;
     margin-bottom: 140px;
+    padding: 160px 0 40px;
 
+    @include mq(tab) {
+      width: 224px;
+      padding: 118px 0 40px;
+      margin: 0;
+    }
+
+    @include mq(desk) {
+      width: 368px;
+      padding: 140px 0 60px;
+      margin: 0;
+    }
     &:nth-child(2) {
       background-color: var(--second-card-color);
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/webp/products/ice-coffee-mob-1x.webp);
+
+        @include mq(retina) {
+          background-image: url(../images/webp/products/ice-coffee-mob-2x.webp);
+        }
+
+        @include mq(tab) {
+          background-image: url(../images/webp/products/ice-coffee-tab-1x.webp);
+          width: 224px;
+
+          @include mq(retina) {
+            background-image: url(../images/webp/products/ice-coffee-tab-2x.webp);
+          }
+        }
+
+        @include mq(desk) {
+          background-image: url(../images/webp/products/ice-coffee-desk-1x.webp);
+          width: 368px;
+
+          @include mq(retina) {
+            background-image: url(../images/webp/products/ice-coffee-desk-2x.webp);
+          }
+        }
+      }
     }
 
     &:nth-child(3) {
       background-color: var(--third-card-color);
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/webp/products/milkshakes-mob-1x.webp);
+
+        @include mq(retina) {
+          background-image: url(../images/webp/products/milkshakes-mob-2x.webp);
+        }
+
+        @include mq(tab) {
+          background-image: url(../images/webp/products/milkshakes-tab-1x.webp);
+          background-repeat: no-repeat;
+
+          @include mq(retina) {
+            background-image: url(../images/webp/products/milkshakes-tab-2x.webp);
+          }
+        }
+
+        @include mq(desk) {
+          background-image: url(../images/webp/products/milkshakes-desk-1x.webp);
+
+          @include mq(retina) {
+            background-image: url(../images/webp/products/milkshakes-desk-2x.webp);
+          }
+        }
+      }
+
+      &:last-child {
+        margin: 0;
+      }
     }
 
-    @include mq(tab) {
-      flex-basis: calc((100% - 48px) / 3);
+    .products__title {
+      font-family: var(--title-font-family);
+      color: var(--white-color);
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 70px;
+      position: relative;
+
+      @include mq(desk) {
+        font-size: 30px;
+      }
+
+      &::after {
+        content: url(/src/images/png/products/points-1x.png);
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .products__text {
+      color: var(--white-color);
+      font-family: var(--primary-font-family);
+      font-size: 14px;
+      padding: 0 40px;
+      font-weight: 700;
+      line-height: 152%;
+
+      @include mq(tab) {
+        padding: 0 32px;
+        line-height: 176%;
+      }
+
+      @include mq(desk) {
+        padding: 0 63px;
+        font-size: 16px;
+        line-height: 176%;
+      }
+    }
+
+    .products-img__btn {
+      width: 40px;
+      margin: 0 auto;
+      margin-top: 32px;
+
+      @include mq(desk) {
+        margin-top: 60px;
+      }
     }
   }
 
   .products__item::before {
-    content: url(/src/images/webp/products/ice-cream-tab-1x.webp);
+    content: '';
+    background-image: url(../images/webp/products/ice-cream-mob-1x.webp);
     left: -50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     transform: translateX(50%);
     width: 280px;
+    height: 280px;
     position: absolute;
-    top: -115px;
-  }
+    top: -140px;
 
-  .products__title {
-    font-family: var(--primary-font-family);
-    color: var(--white-color);
-    font-weight: 400;
-    font-size: 20px;
-    margin-bottom: 20px;
-    margin-top: 140px;
-  }
-
-  .products__text {
-    color: var(--white-color);
-    font-family: var(--title-font-family);
-    font-size: 14px;
-    padding: 0 40px;
+    @include mq(retina) {
+      background-image: url(../images/webp/products/ice-cream-mob-1x.webp);
+    }
 
     @include mq(tab) {
-      padding: 0 32px;
+      background-image: url(../images/webp/products/ice-cream-tab-1x.webp);
+      width: 224px;
+      top: -165px;
+
+      @include mq(retina) {
+        background-image: url(../images/webp/products/ice-cream-tab-2x.webp);
+      }
     }
-  }
 
-  .products__btn {
-    border-radius: 50%;
-    background: transparent;
-  }
+    @include mq(desk) {
+      background-image: url(../images/webp/products/ice-cream-desk-1x.webp);
+      width: 368px;
+      top: -185px;
 
-  .products__img {
-    width: 40px;
-    height: 40px;
+      @include mq(retina) {
+        background-image: url(../images/webp/products/ice-cream-desk-2x.webp);
+      }
+    }
   }
 }
