@@ -64,7 +64,7 @@
   }
 
   @include mq(tab) {
-    padding: 37px 55 44px;
+    padding: 37px 50px 44px;
     margin-top: 20px;
   }
 
@@ -103,15 +103,15 @@
   @include mq(tab) {
     font-size: 14px;
     line-height: 2.16;
-    padding: 0 50px;
+    padding: 0;
     background-image: repeating-linear-gradient(
       0deg,
       #e1e1e1 0 1px,
       transparent 1px 32px
     );
     &::before {
-      top: -19px;
-      left: 25px;
+      top: -18px;
+      left: -30px;
       width: 60px;
       height: 40px;
       z-index: -1;
@@ -124,11 +124,11 @@
     background-image: repeating-linear-gradient(
       0deg,
       #e1e1e1 0 1px,
-      transparent 1px 26px
+      transparent 1px 27px
     );
     &::before {
-      top: -14px;
-      left: 10px;
+      top: -13px;
+      left: 5px;
       width: 54px;
       height: 40px;
       z-index: -1;
