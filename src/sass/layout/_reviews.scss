@@ -38,51 +38,91 @@
   width: 100%;
   height: 100%;
   background-image: linear-gradient(to bottom, #fafafa, #fafafa);
-  padding: 50px 66px 15px;
+  padding: 43px 66px 26px;
   margin-top: 32px;
-  @include mq(tab) {
-    padding: 40px 50px;
-    margin-top: 20px;
-  }
-  @include mq(desk) {
-    margin-top: 16px;
-  }
-}
-
-.reviews__text {
-  background-position: center bottom 1px;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #e1e1e1,
-    #e1e1e1,
-    #fafafa 1px,
-    #fafafa 31px
-  );
-}
-
-.reviews__text {
-  font-size: 12px;
-  line-height: 255%;
-  color: var(--black-color);
-  &::before {
+  &::after {
     content: '';
-    top: 16px;
-    left: 0;
-    width: 54px;
-    height: 40px;
+    bottom: -16px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 32px;
+    height: 4px;
     position: absolute;
-    background-image: url(../images/webp/customer-peviews/comma-1x.webp);
+    background-image: url(../images/red-dots.svg);
     background-repeat: no-repeat;
     background-size: contain;
   }
 
   @include mq(tab) {
+    padding: 37px 55 44px;
+    margin-top: 20px;
+  }
+
+  @include mq(desk) {
+    margin-top: 16px;
+    padding: 47px 109px 39px;
+  }
+}
+
+.reviews__text {
+  position: relative;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #e1e1e1 0 1px,
+    transparent 1px 31px
+  );
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 255%;
+  color: var(--black-color);
+  z-index: 100;
+
+  &::before {
+    content: '';
+    top: -10px;
+    left: -10px;
+    width: 54px;
+    height: 40px;
+    position: absolute;
+    background-image: url(../images/coma.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  @include mq(tab) {
     font-size: 14px;
     line-height: 2.16;
+    padding: 0 50px;
+    background-image: repeating-linear-gradient(
+      0deg,
+      #e1e1e1 0 1px,
+      transparent 1px 32px
+    );
+    &::before {
+      top: -19px;
+      left: 25px;
+      width: 60px;
+      height: 40px;
+      z-index: -1;
+    }
   }
   @include mq(desk) {
     font-size: 14px;
     line-height: 1.86;
+    padding: 0 35px;
+    background-image: repeating-linear-gradient(
+      0deg,
+      #e1e1e1 0 1px,
+      transparent 1px 26px
+    );
+    &::before {
+      top: -14px;
+      left: 10px;
+      width: 54px;
+      height: 40px;
+      z-index: -1;
+    }
   }
 }
 
@@ -91,6 +131,11 @@
   font-size: 14px;
   line-height: 1.86;
   color: var(--black-color);
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #000000;
 
   @include mq(tab) {
     font-size: 16px;
