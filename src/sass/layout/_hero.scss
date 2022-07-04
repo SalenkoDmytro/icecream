@@ -1,28 +1,28 @@
 .hero__section {
   background-color: var(--hero-bg-color);
   height: 502px;
-  @include mq(tab){
+  @include mq(tab) {
     height: 416px;
   }
-  @include mq(desk){
+  @include mq(desk) {
     height: 664px;
   }
 }
 
-.hero__content{
+.hero__content {
   position: relative;
   display: flex;
   justify-content: space-between;
   padding-top: 194px;
-  @include mq(tab){
+  @include mq(tab) {
     padding-top: 102px;
   }
-  @include mq(desk){
+  @include mq(desk) {
     padding-top: 147px;
   }
 }
 
-.hero__wrap{
+.hero__wrap {
   @media screen and (max-width: 767px) {
     position: absolute;
     z-index: 2;
@@ -40,13 +40,13 @@
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  @include mq(tab){
+  @include mq(tab) {
     max-width: 162px;
     font-size: 22px;
     line-height: 1.13;
   }
 
-  @include mq(desk){
+  @include mq(desk) {
     max-width: 277px;
     margin-bottom: 24px;
     font-size: 38px;
@@ -57,18 +57,18 @@
     color: var(--accent-color);
     font-size: 48px;
     line-height: 96.5%;
-    @include mq(tab){
+    @include mq(tab) {
       font-size: 34px;
       line-height: 90.5%;
     }
-    @include mq(desk){
+    @include mq(desk) {
       font-size: 58px;
       line-height: 90.5%;
     }
   }
 }
 
-.btn__hero{
+.btn__hero {
   display: flex;
 }
 
@@ -83,7 +83,7 @@
   align-items: center;
   text-align: center;
 
-  @include mq(desk){
+  @include mq(desk) {
     padding: 11px 20px;
     border-radius: 20px;
     font-family: var(--primary-font-family);
@@ -100,7 +100,7 @@
     background-color: var(--accent-color);
     color: var(--white-color);
     margin-right: 8px;
-    @include mq(desk){
+    @include mq(desk) {
       margin-right: 12px;
     }
   }
@@ -112,56 +112,72 @@
   }
 }
 
-.hero--img__milk{
+.hero--img__milk {
+  display: block;
   position: absolute;
   top: 246px;
   width: 152px;
   height: 154px;
-  @include mq(desk){
+  @include mq(desk) {
     top: 388px;
     width: 213px;
     height: 216px;
   }
 }
 
-.hero__link{
-  position: relative;
+.hero__link {
+  position: absolute;
   z-index: 2;
-  left: 152px;;
+  top: 287px;
+  left: 152px;
   width: 124px;
-  margin-top: 61px;
   font-weight: 400;
   font-size: 8px;
   line-height: 150%;
   color: var(--white-color);
-  @include mq(desk){
+  @include mq(desk) {
     width: 220px;
-    margin-top: 108px;
+    top: 456px;
     left: 213px;
     font-size: 14px;
     line-height: 140%;
   }
 }
 
-.hero-arrow__link{
+.hero-arrow__link {
   position: absolute;
   top: 342px;
-  left: 152px;;
+  left: 152px;
   width: 18px;
-  margin-top: 7px;
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @include mq(desk){
+  @include mq(desk) {
     top: 554px;
     left: 213px;;
     width: 26px;
-    margin-top: 20px;
+
+  }
+}
+
+.hero--img__woman {
+  position: absolute;
+  top: 265px;
+  right: 0;
+  z-index: 2;
+  width: 190px;
+  height: 150px;
+
+  @include mq(desk) {
+    top: 423px;
+    right: 0;
+    width: 304px;
+    height: 214px;
   }
 }
 
 //Ice Cream
-.hero--img__ice{
+.hero--img__ice {
   position: absolute;
   z-index: 1;
   top: 92px;
@@ -170,7 +186,7 @@
   //left: 117px;
   width: 171px;
   height: 410px;
-  @include mq(tab){
+  @include mq(tab) {
     top: 80px;
     right: 303px;
     //right: 39%;
@@ -178,7 +194,7 @@
     width: 143px;
     height: 336px;
   }
-  @include mq(desk){
+  @include mq(desk) {
     top: 108px;
     right: 328px;
     //right: 27%;
@@ -189,13 +205,13 @@
 }
 
 //Circle
-.hero--img__circle{
+.hero--img__circle {
   position: absolute;
   top: 83px;
   right: -20px;
   //left: 36px;
   height: 344px;
-  @include mq(tab){
+  @include mq(tab) {
     top: 43px;
     right: 185px;
     //right: 24%;
@@ -203,7 +219,7 @@
     width: 335px;
     height: 333px;
   }
-  @include mq(desk){
+  @include mq(desk) {
     top: 54px;
     right: 149px;
     //right: 12%;
@@ -213,7 +229,7 @@
   }
 }
 
-.number{
+.number {
   font-family: var(--title-font-family);
   color: var(--accent-color);
   font-weight: 400;
@@ -223,49 +239,64 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
-  @include mq(mob-only){
+  @include mq(mob-only) {
     display: none;
   }
-  @include mq(desk){
+  @include mq(desk) {
     font-size: 46px;
     line-height: 1.15;
   }
 
-  &__margin{
+  &__margin {
     margin-bottom: 18px;
   }
 
-  &__text{
+  &__text {
     font-family: var(--primary-font-family);
     color: var(--white-color);
     font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
     text-align: right;
-    @include mq(desk){
+    @include mq(desk) {
       font-size: 14px;
       line-height: 1.2;
+      margin-top: 2px;
     }
   }
 }
 
-.number__position{
+.number-one__position {
   position: absolute;
-  z-index: 2;
-  top: 92px;
-  right: 7px;
+  z-index: 1;
+  top: 94px;
+  right: 10px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @include mq(desk) {
+    top: 156px;
+    right: 18px;
+  }
+}
+
+.number-two__position {
+  position: absolute;
+  z-index: 1;
+  top: 152px;
+  right: 10px;
 
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @include mq(desk){
-    top: 152px;
-    right: 15px;
+  @include mq(desk) {
+    top: 248px;
+    right: 18px;
   }
 }
 
 .img-one__small,
-.hero-two__small{
+.hero-two__small {
   position: absolute;
   right: 0;
   width: 16px;
@@ -273,42 +304,25 @@
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @include mq(desk){
+  @include mq(desk) {
     width: 30px;
     height: 30px;
   }
 }
 
-.img-one__small{
-  top: 90px;
-  @include mq(desk){
-    top: 149px;
+.img-one__small {
+  top: 92px;
+  @include mq(desk) {
+    top: 152px;
   }
 }
 
-.hero-two__small{
-  top: 150px;
-  @include mq(desk){
-    top: 236px;
+.hero-two__small {
+  top: 152px;
+  @include mq(desk) {
+    top: 244px;
   }
 }
 
 
-.hero--img__woman{
-  position: absolute;
-  top: 265px;
-  right: 0;
-  z-index: 2;
-  width: 190px;
-  height: 150px;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-  @include mq(desk){
-    top: 423px;
-    right: 0;
-    width: 304px;
-    height: 214px;
-  }
-}
 

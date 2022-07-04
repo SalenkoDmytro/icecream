@@ -1,12 +1,13 @@
 .header {
   position: relative;
+
   &__wrapper {
     z-index: 2;
     align-items: center;
     padding-top: 8px;
     display: flex;
     position: absolute;
-    top:0;
+    top: 0;
     width: 100%;
     @include mq(tab) {
       padding-top: 32px;
@@ -17,10 +18,9 @@
       top: 0;
       width: 100%;
       padding-top: 37px;
-      padding-bottom: 37px;
     }
-
   }
+
   &__nav {
     @include mq(desk) {
       display: flex;
