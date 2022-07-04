@@ -56,6 +56,10 @@
     margin-bottom: 140px;
     padding: 160px 0 40px;
 
+    @include mq(fab) {
+      width: 350px;
+    }
+
     @include mq(tab) {
       width: 224px;
       padding: 118px 0 40px;
@@ -198,7 +202,11 @@
     top: -140px;
 
     @include mq(retina) {
-      background-image: url(../images/webp/products/ice-cream-mob-1x.webp);
+      background-image: url(../images/webp/products/ice-cream-mob-2x.webp);
+    }
+
+    @include mq(fab) {
+      width: 350px;
     }
 
     @include mq(tab) {
