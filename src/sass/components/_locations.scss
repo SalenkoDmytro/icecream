@@ -1,0 +1,32 @@
+.locations__modal {
+  padding: 20px;
+}
+.locations__slide {
+  text-align: center;
+}
+.contacts-card__label.locations__label {
+  margin-bottom: 10px;
+}
+.locations__title {
+  margin-bottom: 20px;
+  color: var(--title-color);
+  &::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/morozhenoye1x.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include mq(retina) {
+      background-image: url(../images/morozhenoye-2x.png);
+    }
+  }
+}
+.locations__map {
+  width: 250px;
+}

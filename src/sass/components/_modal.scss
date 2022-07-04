@@ -11,7 +11,7 @@
 
   background-color: #00000033;
 
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity var(--transition), visibility var(--transition);
 
   &.is-hidden {
     visibility: hidden;
@@ -76,7 +76,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 22px;
 
-  transition: border-color 250ms linear;
+  transition: border-color var(--transition);
 
   &:not(:last-child) {
     padding-left: 42px;
@@ -99,7 +99,7 @@
   fill: var(--title-color);
 
   transform: translateY(-50%);
-  transition: fill 250ms linear;
+  transition: fill var(--transition);
 
   .label__input:focus + & {
     fill: var(--accent-color);
@@ -131,7 +131,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 22px;
 
-  transition: transform 250ms linear, visibility 250ms linear;
+  transition: transform var(--transition), visibility var(--transition);
 
   @include mq(mob-only) {
     margin-left: auto;
@@ -174,7 +174,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  transition: fill 250ms linear;
+  transition: fill var(--transition);
 
   &:hover,
   &:focus {
@@ -214,7 +214,7 @@
 
   border: 2px solid #000000;
   border-radius: 4px;
-  transition: background-color 250ms linear, border-color 250ms linear;
+  transition: background-color var(--transition), border-color var(--transition);
 
   .policy__checkbox:checked + & {
     background-color: var(--accent-color);
