@@ -1,27 +1,68 @@
 .advantages {
   background: var(--second-br-color);
+  padding-top: 0;
 }
+// .advantages__container {
+//   @include mq(mob-only) {
+//     padding-right: 80px;
+//   }
 
+//   @include mq(tab-only) {
+//     padding: 0 112px;
+//     // width: 160px;
+//   }
+// }
 .advantages__list {
-  --card-gap: 10px;
+  justify-content: space-between;
+  //   --card-gap: 20px;
 
   @include mq(fab) {
     --card-item: 2;
-    --card-gap: 26px;
+    // --card-gap: 20px;
   }
 
   @include mq(tab) {
     --card-item: 3;
-    --card-gap: 32px;
+    // --card-gap: 32px;
   }
 
   @include mq(desk) {
-    --card-gap: 80px;
+    // --card-gap: 80px;
   }
 }
 
+.advantages__item {
+  &:nth-child(1) .advantages__statistics::before {
+    width: 33px;
+    background-image: url(../images/png/about/pot-1-2x.png);
+  }
+
+  &:nth-child(2) .advantages__statistics::before {
+    width: 50px;
+    background-image: url(../images/png/about/bucket-2-2x.png);
+  }
+
+  &:nth-child(3) .advantages__statistics::before {
+    width: 44px;
+    background-image: url(../images/png/about/candy-3-2x.png);
+  }
+
+  @include mq(mob-only) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include mq(fab-only) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+}
 .advantages__statistics {
-  width: 100px;
+  display: flex;
+  flex-direction: column;
+  //   width: 100px;
   margin-bottom: 10px;
   font-family: var(--title-font-family);
   font-weight: 400;
@@ -52,6 +93,20 @@
     font-size: 58px;
     line-height: 1.137;
   }
+  &::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: carentcolor;
+    background-image: url(../images/png/about/pot-1-2x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 36px;
+    @include mq(desk) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .advantages__texst {
@@ -65,18 +120,18 @@
   color: var(--black-color);
 
   @include mq(fab) {
-    // width: 210px;
+    width: 210px;
     font-size: 12px;
     line-height: 1.7;
   }
   @include mq(tab) {
-    // width: 220px;
+    width: 160px;
     font-size: 14px;
     line-height: 1.71;
   }
 
   @include mq(desk) {
-    // width: 288px;
+    width: 288px;
     font-size: 16px;
     line-height: 1.75;
     letter-spacing: 0.02em;
