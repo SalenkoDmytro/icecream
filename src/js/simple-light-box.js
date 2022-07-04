@@ -1,4 +1,4 @@
-let gallery = new SimpleLightbox('.gallery a',{captionDelay:300});
+let gallery = new SimpleLightbox('.gallery a', { captionDelay: 300 });
 
 
 // gallery.on('show.simplelightbox', function () {
