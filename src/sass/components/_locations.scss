@@ -1,12 +1,24 @@
 .locations__modal {
-  padding: 20px;
+  padding: 40px 20px 20px;
 }
 .locations__slide {
   text-align: center;
-  @include mq(fab) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+  &.swiper-slide {
+  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.slide__container {
+  @include mq(desk) {
+    width: 100%;
+  }
+  .swiper-slide & {
+    @include mq(fab) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
   }
 }
 .contacts-card__label.locations__label {
@@ -19,7 +31,7 @@
   }
   @include mq(fab) {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     margin-left: auto;
     flex-grow: 1;
   }
@@ -45,4 +57,37 @@
 }
 .locations__map {
   width: 250px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  @include mq(mob-only) {
+    top: 20%;
+  }
+}
+.locations__frame {
+  border-radius: 20px;
+
+  @include mq(fab) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include mq(tab) {
+    display: none;
+  }
+  &--middle {
+    display: none;
+    border-radius: 20px;
+    @include mq(tab-only) {
+      display: block;
+    }
+  }
+  &--large {
+    display: none;
+    border-radius: 20px;
+
+    @include mq(desk) {
+      display: block;
+    }
+  }
 }
