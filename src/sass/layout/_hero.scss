@@ -94,8 +94,12 @@
   &--white {
     background-color: var(--white-color);
     color: var(--accent-color);
-  }
 
+    &:hover,
+    &:focus {
+      background-color: var(--btn-hover-color);
+    }
+  }
   &--pink {
     background-color: var(--accent-color);
     color: var(--white-color);
@@ -106,7 +110,7 @@
   }
 }
 
-.hero-note {
+.hero__box {
   @media screen and (max-width: 767px) {
     display: none;
   }
