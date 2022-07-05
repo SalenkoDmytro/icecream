@@ -40,21 +40,31 @@
   background-image: linear-gradient(to bottom, #fafafa, #fafafa);
   padding: 43px 66px 26px;
   margin-top: 32px;
+  margin-bottom: 32px;
+
   &::after {
     content: '';
-    bottom: -16px;
+    bottom: -20px;
+
+    @include mq(tab-only) {
+      bottom: -8px;
+    }
+
     left: 50%;
     transform: translatex(-50%);
     width: 32px;
     height: 4px;
     position: absolute;
-    background-image: url(../images/red-dots.svg);
+    background-image: url(../images/png/customer-peviews/point-1x.png);
+    @include mq(retina) {
+      background-image: url(../images/png/customer-peviews/point-2x.png);
+    }
     background-repeat: no-repeat;
     background-size: contain;
   }
 
   @include mq(tab) {
-    padding: 37px 55 44px;
+    padding: 37px 50px 44px;
     margin-top: 20px;
   }
 
@@ -93,15 +103,15 @@
   @include mq(tab) {
     font-size: 14px;
     line-height: 2.16;
-    padding: 0 50px;
+    padding: 0;
     background-image: repeating-linear-gradient(
       0deg,
       #e1e1e1 0 1px,
       transparent 1px 32px
     );
     &::before {
-      top: -19px;
-      left: 25px;
+      top: -18px;
+      left: -30px;
       width: 60px;
       height: 40px;
       z-index: -1;
@@ -114,11 +124,11 @@
     background-image: repeating-linear-gradient(
       0deg,
       #e1e1e1 0 1px,
-      transparent 1px 26px
+      transparent 1px 27px
     );
     &::before {
-      top: -14px;
-      left: 10px;
+      top: -13px;
+      left: 5px;
       width: 54px;
       height: 40px;
       z-index: -1;
@@ -127,21 +137,20 @@
 }
 
 .reviews__place {
-  margin-top: 16px;
   font-size: 14px;
   line-height: 1.86;
   color: var(--black-color);
-
   text-align: center;
-  letter-spacing: 0.04em;
-
-  color: #000000;
+  margin-bottom: 16px;
+  letter-spacing: 0;
 
   @include mq(tab) {
     font-size: 16px;
     line-height: 2.16;
+    margin-bottom: 32px;
   }
   @include mq(desk) {
     font-size: 20px;
+    line-height: 1.86;
   }
 }

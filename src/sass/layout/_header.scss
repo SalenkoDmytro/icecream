@@ -17,19 +17,14 @@
     display: flex;
     align-items: center;
   }
-  &__nav {
-    @include mq(desk) {
-      display: flex;
-    }
-  }
+
   &.fixed {
     position: fixed;
-    background-color: pink;
+    background-color: var(--hero-bg-color);
     padding: 20px 0;
   }
 }
 
-
-
-
-
+.btn__wrap {
+  margin-left: auto;
+}
