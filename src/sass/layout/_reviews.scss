@@ -1,0 +1,147 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  border-radius: 0;
+  background-image: url(../images/home.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.reviews_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #fafafa, #fafafa);
+  padding: 43px 66px 26px;
+  margin-top: 32px;
+  &::after {
+    content: '';
+    bottom: -16px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 32px;
+    height: 4px;
+    position: absolute;
+    background-image: url(../images/red-dots.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include mq(tab) {
+    padding: 37px 55 44px;
+    margin-top: 20px;
+  }
+
+  @include mq(desk) {
+    margin-top: 16px;
+    padding: 47px 109px 39px;
+  }
+}
+
+.reviews__text {
+  position: relative;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #e1e1e1 0 1px,
+    transparent 1px 31px
+  );
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 255%;
+  color: var(--black-color);
+  z-index: 100;
+
+  &::before {
+    content: '';
+    top: -10px;
+    left: -10px;
+    width: 54px;
+    height: 40px;
+    position: absolute;
+    background-image: url(../images/coma.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  @include mq(tab) {
+    font-size: 14px;
+    line-height: 2.16;
+    padding: 0 50px;
+    background-image: repeating-linear-gradient(
+      0deg,
+      #e1e1e1 0 1px,
+      transparent 1px 32px
+    );
+    &::before {
+      top: -19px;
+      left: 25px;
+      width: 60px;
+      height: 40px;
+      z-index: -1;
+    }
+  }
+  @include mq(desk) {
+    font-size: 14px;
+    line-height: 1.86;
+    padding: 0 35px;
+    background-image: repeating-linear-gradient(
+      0deg,
+      #e1e1e1 0 1px,
+      transparent 1px 26px
+    );
+    &::before {
+      top: -14px;
+      left: 10px;
+      width: 54px;
+      height: 40px;
+      z-index: -1;
+    }
+  }
+}
+
+.reviews__place {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.86;
+  color: var(--black-color);
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #000000;
+
+  @include mq(tab) {
+    font-size: 16px;
+    line-height: 2.16;
+  }
+  @include mq(desk) {
+    font-size: 20px;
+  }
+}
