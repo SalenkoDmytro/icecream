@@ -317,3 +317,8 @@
     //right: calc(20% - 165px);
   }
 }
+
+.hero-img__ice{
+  animation:  shakeX;
+  animation-duration: 7s;
+}
