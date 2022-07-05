@@ -186,25 +186,27 @@
 .about__text--third {
   color: var(--text-color);
   line-height: 1.58;
+  margin-bottom: 12px;
+}
+
+.about__text--forth.text-open {
+  height: auto;
+  overflow: visible;
+  //   opacity: 0;
+}
+.about__text--forth {
+  height: 0px;
+  overflow: hidden;
+  // opacity: 0;
+  color: var(--text-color);
+  line-height: 1.58;
   margin-bottom: 40px;
+}
+.btn__about.text-open .btn__icon {
+  transform: rotate(-90deg);
+  transition: transform var(--transition);
 }
 
 .btn__about {
   width: 176px;
-  //   height: 44px;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   font-family: var(--title-font-family);
-  //   font-weight: 700;
-  //   font-size: 14px;
-  //   line-height: 1.28;
-  //   text-align: center;
-
-  //   color: var(--accent-color);
-  //   border-radius: 22px;
-  //   background-color: var(--white-color);
-
-  //   &:hover {
-  //     background-color: red;
-  //   }
 }
