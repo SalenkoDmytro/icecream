@@ -120,18 +120,18 @@
   color: var(--black-color);
 
   @include mq(fab) {
-    width: 210px;
+    max-width: 210px;
     font-size: 12px;
     line-height: 1.7;
   }
   @include mq(tab) {
-    width: 160px;
+    max-width: 160px;
     font-size: 14px;
     line-height: 1.71;
   }
 
   @include mq(desk) {
-    width: 288px;
+    max-width: 288px;
     font-size: 16px;
     line-height: 1.75;
     letter-spacing: 0.02em;
