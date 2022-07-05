@@ -1828,7 +1828,7 @@ a {
   font-size: 12px;
   line-height: 255%;
   color: var(--black-color);
-  z-index: 100;
+  z-index: 99;
 }
 .reviews__text::before {
   content: "";
