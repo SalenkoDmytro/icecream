@@ -16,6 +16,7 @@
   @include mq(desk) {
     padding-top: 147px;
     padding-bottom: 40px;
+    //max-height: 664px;
   }
 }
 
@@ -318,7 +319,6 @@
   }
 }
 
-.hero-img__ice{
-  animation:  shakeX;
-  animation-duration: 7s;
+.hero-img__ice.animate__headShake {
+  animation-duration: 6s;
 }
