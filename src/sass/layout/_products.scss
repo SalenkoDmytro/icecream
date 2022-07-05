@@ -2,7 +2,7 @@
   font-family: var(--title-font-family);
   color: var(--title-color);
   font-size: 18px;
-  line-height: 1.66;
+  line-height: 1.16;
   text-align: center;
 
   @include mq(fab) {
@@ -20,77 +20,131 @@
   }
 }
 
-.products-title {
-  font-family: var(--title-font-family);
-  color: var(--accent-color);
-  font-size: 34px;
-  line-height: 1.15;
+.products__title {
   text-transform: uppercase;
-  text-align: center;
 
-  @include mq(fab) {
-    font-size: 40px;
-  }
+  margin-bottom: 148px;
 
   @include mq(tab) {
-    font-size: 48px;
-    line-height: 1.15;
+    margin-bottom: 160px;
   }
 
   @include mq(desk) {
-    font-size: 58px;
-    line-height: 1.14;
+    margin-bottom: 280px;
   }
 }
 
-.products__list {
+.product__wrap {
   position: relative;
-  margin-top: 148px;
-  --card-item: 1;
-  --card-gap: 0;
+}
+
+.products__list {
+  --card-gap: 140px;
 
   @include mq(tab) {
     --card-gap: 16px;
     --card-item: 3;
-    margin-top: 160px;
-  }
-
-  @include mq(fab-only) {
-    justify-content: center;
   }
 
   @include mq(desk) {
     --card-gap: 32px;
-    margin-top: 280px;
+  }
+}
+
+.product__title {
+  font-family: var(--title-font-family);
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 70px;
+  position: relative;
+  text-align: center;
+  line-height: 1.15;
+
+  @include mq(desk) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+
+  &::after {
+    content: url(../images/png/products/points-2x.png);
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.product__text {
+  color: var(--white-color);
+  font-family: var(--primary-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.52;
+  text-align: center;
+
+  @include mq(fab) {
+    line-height: 1.65;
+  }
+
+  @include mq(tab) {
+    line-height: 1.76;
+  }
+
+  @include mq(desk) {
+    font-size: 16px;
   }
 }
 
 .products__item {
-  background-color: var(--hero-bg-color);
-  width: 280px;
   border-radius: 24px;
-  position: relative;
-  margin-bottom: 140px;
-  padding: 160px 0 40px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @include mq(fab) {
-    width: 350px;
-  }
-
+  padding: 160px 40px 112px;
   @include mq(tab) {
-    width: 224px;
-    padding: 118px 0 40px;
-    margin: 0;
+    padding: 118px 32px 112px;
   }
 
   @include mq(desk) {
-    width: 368px;
-    padding: 140px 0 60px;
+    padding: 269px 60px 160px;
     margin: 0;
+  }
+
+  &:nth-child(1) {
+    background-color: var(--hero-bg-color);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translateX(50%);
+      top: -140px;
+      width: 100%;
+
+      background-image: url(../images/webp/products/ice-cream-mob-1x.webp);
+
+      @include mq(retina) {
+        background-image: url(../images/webp/products/ice-cream-mob-2x.webp);
+      }
+
+      @include mq(tab) {
+        background-image: url(../images/webp/products/ice-cream-tab-1x.webp);
+
+        @include mq(retina) {
+          background-image: url(../images/webp/products/ice-cream-tab-2x.webp);
+        }
+      }
+
+      @include mq(desk) {
+        background-image: url(../images/webp/products/ice-cream-desk-1x.webp);
+        width: 368px;
+
+        @include mq(retina) {
+          background-image: url(../images/webp/products/ice-cream-desk-2x.webp);
+        }
+      }
+    }
   }
 
   &:nth-child(2) {
@@ -106,7 +160,6 @@
 
       @include mq(tab) {
         background-image: url(../images/webp/products/ice-coffee-tab-1x.webp);
-        width: 224px;
 
         @include mq(retina) {
           background-image: url(../images/webp/products/ice-coffee-tab-2x.webp);
@@ -154,56 +207,6 @@
     }
   }
 
-  .products__title {
-    font-family: var(--title-font-family);
-    color: var(--white-color);
-    font-size: 20px;
-    margin-bottom: 70px;
-    position: relative;
-    text-align: center;
-    line-height: 1.15;
-
-    @include mq(desk) {
-      font-size: 30px;
-      line-height: 1.13;
-    }
-
-    &::after {
-      content: url(/src/images/png/products/points-1x.png);
-      position: absolute;
-      top: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
-  .products__text {
-    color: var(--white-color);
-    font-family: var(--primary-font-family);
-    font-size: 14px;
-    width: 200px;
-    margin-right: auto;
-    margin-left: auto;
-    font-weight: 700;
-    line-height: 1.52;
-    text-align: center;
-
-    @include mq(fab) {
-      width: 220px;
-      line-height: 1.65;
-    }
-
-    @include mq(tab) {
-      width: 160px;
-      line-height: 1.76;
-    }
-
-    @include mq(desk) {
-      width: 240px;
-      font-size: 16px;
-    }
-  }
-
   .products-img__btn {
     width: 40px;
     margin: 0 auto;
@@ -215,44 +218,44 @@
   }
 }
 
-.products__item::before {
-  content: '';
-  background-image: url(../images/webp/products/ice-cream-mob-1x.webp);
-  left: -50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  transform: translateX(50%);
-  width: 280px;
-  height: 280px;
-  position: absolute;
-  top: -140px;
+// .products__item::before {
+//   content: '';
+//   background-image: url(../images/webp/products/ice-cream-mob-1x.webp);
+//   left: -50%;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   background-position: center;
+//   transform: translateX(50%);
+//   width: 280px;
+//   height: 280px;
+//   position: absolute;
+//   top: -140px;
 
-  @include mq(retina) {
-    background-image: url(../images/webp/products/ice-cream-mob-2x.webp);
-  }
+//   @include mq(retina) {
+//     background-image: url(../images/webp/products/ice-cream-mob-2x.webp);
+//   }
 
-  @include mq(fab) {
-    width: 350px;
-  }
+//   @include mq(fab) {
+//     width: 350px;
+//   }
 
-  @include mq(tab) {
-    background-image: url(../images/webp/products/ice-cream-tab-1x.webp);
-    width: 224px;
-    top: -165px;
+//   @include mq(tab) {
+//     background-image: url(../images/webp/products/ice-cream-tab-1x.webp);
+//     width: 224px;
+//     top: -165px;
 
-    @include mq(retina) {
-      background-image: url(../images/webp/products/ice-cream-tab-2x.webp);
-    }
-  }
+//     @include mq(retina) {
+//       background-image: url(../images/webp/products/ice-cream-tab-2x.webp);
+//     }
+//   }
 
-  @include mq(desk) {
-    background-image: url(../images/webp/products/ice-cream-desk-1x.webp);
-    width: 368px;
-    top: -185px;
+//   @include mq(desk) {
+//     background-image: url(../images/webp/products/ice-cream-desk-1x.webp);
+//     width: 368px;
+//     top: -185px;
 
-    @include mq(retina) {
-      background-image: url(../images/webp/products/ice-cream-desk-2x.webp);
-    }
-  }
-}
+//     @include mq(retina) {
+//       background-image: url(../images/webp/products/ice-cream-desk-2x.webp);
+//     }
+//   }
+// }
