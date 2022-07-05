@@ -38,15 +38,6 @@
   // font-size: 16px;
   // line-height: 1.3px;
 
-  @include mq(mob) {
-    display: none;
-  }
-
-  @include mq(tab) {
-    display: inline-flex;
-    margin-left: auto;
-  }
-
   transition: background-color var(--transition);
 
   &:hover,
@@ -57,8 +48,16 @@
   }
 }
 
-// .btn__header--append {
-// }
+.btn__header--append {
+  @media (max-width: 768) {
+    display: none;
+  }
+
+  @include mq(tab) {
+    display: inline-flex;
+    margin-left: auto;
+  }
+}
 
 .mob-btn__open {
   background-color: transparent;
