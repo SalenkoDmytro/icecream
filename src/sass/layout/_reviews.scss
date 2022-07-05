@@ -13,6 +13,11 @@
 .swiper-pagination {
   position: static;
 }
+.sl-wrapper .sl-navigation button.sl-next,
+.sl-wrapper .sl-navigation button.sl-prev,
+.sl-wrapper .sl-close {
+  color: var(--accent-color);
+}
 
 .swiper-pagination-bullet {
   width: 12px;
