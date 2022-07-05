@@ -139,6 +139,26 @@
   }
 }
 
+.about__text {
+  transform: translate(-120px, 0px);
+  opacity: 0;
+  transition-duration: 1000ms;
+  overflow: hidden;
+}
+
+.about-box__text.active-js .about__text:nth-child(2) {
+  transition-delay: 400ms;
+}
+
+.about-box__text.active-js .about__text:nth-child(3) {
+  transition-delay: 800ms;
+}
+
+.about-box__text.active-js .about__text {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 .about__text--primary {
   margin-bottom: 40px;
 
