@@ -188,6 +188,21 @@
   }
 }
 
+.hero-info__btn--hide.text-open.hero-info__btn {
+  height: auto;
+  overflow: visible;
+}
+
+.hero-info__btn--hide.hero-info__btn {
+  height: 0;
+  overflow: hidden;
+}
+
+.hero-info__arrow.text-open img {
+  transform: rotate(180deg);
+  transition: transform var(--transition);
+}
+
 .hero-info__arrow {
 
   border-radius: 50%;
