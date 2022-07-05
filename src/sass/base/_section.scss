@@ -8,6 +8,7 @@
   line-height: 1.15;
   text-align: center;
   color: var(--title-color);
+  font-family: var(--title-font-family);
 
   @include mq(tab) {
     font-size: 48px;
