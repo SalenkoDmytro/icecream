@@ -1,17 +1,22 @@
 .about {
   background: var(--second-br-color);
   @include mq(desk) {
-    background-image: url(../images/png/about/milk-desk-1x.png);
+    background-image: url(../images/png/about/milk-left-1x.png),
+      url(../images/png/about/milk-right-1x.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-position: left 0px top 205px, right 0px top 200px;
+    // background-size: 325px;
+    background-size: 650px, 675px;
     @include mq(retina) {
-      background-image: url(../images/png/about/milk-desk-2x.png);
+      background-image: url(../images/png/about/milk-left-2x.png),
+        url(../images/png/about/milk-right-2x.png);
+      background-position: left 0px top 205px, right 0px top 175px;
+      background-size: 650px, 700px;
     }
   }
 }
 
-.about-text__titel {
+.about .about-text__titel {
   margin-bottom: 15px;
   font-family: var(--title-font-family);
   font-weight: 400;
@@ -67,24 +72,17 @@
 }
 .about-box {
   @include mq(tab) {
-    display: flex;
+    --card-item: 2;
+    --card-gap: 32px;
+  }
+
+  @include mq(desk) {
+    --card-gap: 99px;
   }
 }
 .about__img {
   margin-left: auto;
   margin-right: auto;
-
-  @include mq(mob) {
-  }
-
-  @include mq(tab) {
-    margin-right: 32px;
-    max-width: 336px;
-  }
-
-  @include mq(desk) {
-    margin-right: 99px;
-  }
 }
 
 .about-box__text {
@@ -114,6 +112,10 @@
       background-size: contain;
     }
   }
+
+  @include mq(desk) {
+    padding-top: 90px;
+  }
 }
 
 .about__text {
@@ -124,23 +126,23 @@
   text-align: left;
 
   @include mq(mob) {
-    width: 220px;
+    max-width: 220px;
   }
 
   @include mq(fab) {
-    width: 400px;
+    max-width: 400px;
     font-size: 14px;
     line-height: 1.66;
   }
 
   @include mq(tab) {
-    width: 334px;
+    max-width: 334px;
     font-size: 14px;
     line-height: 1.76;
   }
 
   @include mq(desk) {
-    width: 463px;
+    max-width: 463px;
     font-size: 16px;
     line-height: 1.76;
   }
