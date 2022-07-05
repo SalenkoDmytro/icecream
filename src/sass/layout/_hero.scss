@@ -1,3 +1,24 @@
+.hero-bg {
+  @include mq(desk) {
+    background: linear-gradient(-45deg, #ffb8ca, #ffa5ba, #fc90a6);
+    background-size: 400% 200%;
+    animation: gradient 15s ease infinite;
+    height: 664px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .hero__container {
   display: flex;
   justify-content: space-between;
@@ -86,6 +107,7 @@
   &--white {
     background-color: var(--white-color);
     color: var(--accent-color);
+    transition: background-color var(--transition);
 
     &:hover,
     &:focus {
@@ -222,6 +244,7 @@
   left: 81px;
   width: 171px;
   height: 410px;
+  transition: animation-duration var(--transition);
   @include mq(tab) {
     bottom: -40px;
     width: 143px;
@@ -233,6 +256,10 @@
     width: 236px;
     height: 557px;
   }
+}
+
+.hero-img__ice.animate__headShake {
+  animation-duration: 6s;
 }
 
 // -------- LEFT PART --------
@@ -281,7 +308,6 @@
   align-items: flex-end;
   position: relative;
   z-index: 1;
-  //right: 14px;
 }
 
 .number:after {
@@ -317,10 +343,5 @@
     width: 304px;
     height: 241px;
     bottom: -40px;
-    //right: calc(20% - 165px);
   }
-}
-
-.hero-img__ice.animate__headShake {
-  animation-duration: 6s;
 }
