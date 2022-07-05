@@ -2,23 +2,17 @@
   background: var(--second-br-color);
   padding-top: 0;
 }
-// .advantages__container {
-//   @include mq(mob-only) {
-//     padding-right: 80px;
-//   }
 
-//   @include mq(tab-only) {
-//     padding: 0 112px;
-//     // width: 160px;
-//   }
-// }
 .advantages__list {
   justify-content: space-between;
-  //   --card-gap: 20px;
+  @include mq(mob) {
+    --card-item: 1;
+    --card-gap: 32px;
+  }
 
-  @include mq(fab) {
+  @media screen and (min-width: 520px) {
     --card-item: 2;
-    // --card-gap: 20px;
+    --card-gap: 20px;
   }
 
   @include mq(tab) {
@@ -45,18 +39,6 @@
   &:nth-child(3) .advantages__statistics::before {
     width: 44px;
     background-image: url(../images/png/about/candy-3-2x.png);
-  }
-
-  @include mq(mob-only) {
-    &:not(:last-child) {
-      margin-bottom: 32px;
-    }
-  }
-
-  @include mq(fab-only) {
-    &:not(:last-child) {
-      margin-bottom: 32px;
-    }
   }
 }
 .advantages__statistics {
@@ -120,18 +102,18 @@
   color: var(--black-color);
 
   @include mq(fab) {
-    width: 210px;
+    max-width: 210px;
     font-size: 12px;
     line-height: 1.7;
   }
   @include mq(tab) {
-    width: 160px;
+    max-width: 160px;
     font-size: 14px;
     line-height: 1.71;
   }
 
   @include mq(desk) {
-    width: 288px;
+    max-width: 288px;
     font-size: 16px;
     line-height: 1.75;
     letter-spacing: 0.02em;

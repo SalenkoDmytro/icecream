@@ -157,6 +157,23 @@
 }
 .contact-card__link {
   transition: color var(--transition);
+  &--top {
+    margin-bottom: 12px;
+    @include mq(mob-only) {
+      & .contact-card__link {
+        padding-top: 30px;
+      }
+      @include mq(tab) {
+        margin-bottom: 14px;
+      }
+      @include mq(desk) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &--bottom {
+    padding-bottom: 30px;
+  }
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -202,12 +219,12 @@
   &.btn__link--white:focus {
     background-color: var(--btn-hover-color);
   }
-  & + & {
+  .contacts__btns & {
     @include mq(mob-only) {
-      margin-top: 10px;
+      margin-bottom: 10px;
     }
     @include mq(fab-only) {
-      margin-top: 10px;
+      margin-bottom: 10px;
     }
     @include mq(tab) {
       margin-left: 12px;
