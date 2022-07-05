@@ -49,7 +49,7 @@
 }
 
 .btn__header--append {
-  @media (max-width: 768) {
+  @media (max-width: 768px) {
     display: none;
   }
 
@@ -63,7 +63,10 @@
   background-color: transparent;
   border: none;
   flex-shrink: 1;
-  margin-right: 32px;
+
+  @include mq(tab-only) {
+    margin-right: 32px;
+  }
 
   @include mq(desk) {
     display: none;

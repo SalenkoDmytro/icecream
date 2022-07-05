@@ -2,7 +2,10 @@
   display: flex;
   font-family: var(--title-font-family);
   color: var(--pretitle-color);
-  font-size: 18px;
+  font-size: 16px;
+  @media (max-width: 320px) {
+    font-size: 20px;
+  }
   line-height: 1.16;
   justify-content: center;
   @include mq(fab) {
@@ -23,6 +26,7 @@
 .products__title {
   text-transform: uppercase;
 
+  max-width: 100%;
   margin-bottom: 148px;
 
   @include mq(tab) {
@@ -46,13 +50,14 @@
 .products__item {
   position: relative;
   border-radius: 24px;
-  padding: 160px 40px 40px;
+  padding: 160px 0 40px;
+  text-align: center;
   @include mq(tab) {
-    padding: 118px 32px 40px;
+    padding: 118px 0 40px;
   }
 
   @include mq(desk) {
-    padding: 165px 60px 60px;
+    padding: 165px 0 60px;
     margin: 0;
   }
 
@@ -102,7 +107,7 @@
     background-image: url(../images/png/products/ice-cream-mob-1x.png);
 
     @include mq(retina) {
-      background-image: url(../images/png/products/ice-cream-desk-2x.png);
+      background-image: url(../images/png/products/ice-cream-mob-2x.png);
     }
 
     @include mq(tab) {
@@ -155,7 +160,7 @@
     background-image: url(../images/png/products/ice-coffee-mob-1x.png);
 
     @include mq(retina) {
-      background-image: url(../images/png/products/ice-coffee-desk-2x.png);
+      background-image: url(../images/png/products/ice-coffee-mob-2x.png);
     }
 
     @include mq(tab) {
@@ -168,7 +173,6 @@
 
     @include mq(desk) {
       background-image: url(../images/png/products/ice-coffee-desk-1x.png);
-      width: 368px;
 
       @include mq(retina) {
         background-image: url(../images/png/products/ice-coffee-desk-2x.png);
@@ -208,7 +212,7 @@
     background-image: url(../images/png/products/milkshakes-mob-1x.png);
 
     @include mq(retina) {
-      background-image: url(../images/png/products/milkshakes-desk-2x.png);
+      background-image: url(../images/png/products/milkshakes-mob-2x.png);
     }
 
     @include mq(tab) {
@@ -221,7 +225,6 @@
 
     @include mq(desk) {
       background-image: url(../images/png/products/milkshakes-desk-1x.png);
-      width: 368px;
 
       @include mq(retina) {
         background-image: url(../images/png/products/milkshakes-desk-2x.png);
@@ -234,6 +237,11 @@
   font-family: var(--title-font-family);
   color: var(--white-color);
   font-size: 20px;
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
+
   font-weight: 400;
   margin-bottom: 70px;
   position: relative;
