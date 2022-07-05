@@ -34,10 +34,6 @@
   }
 }
 
-.product__wrap {
-  position: relative;
-}
-
 .products__list {
   --card-gap: 140px;
 
@@ -45,9 +41,192 @@
     --card-gap: 16px;
     --card-item: 3;
   }
+}
+
+.products__item {
+  position: relative;
+  border-radius: 24px;
+  padding: 160px 40px 112px;
+  @include mq(tab) {
+    padding: 118px 32px 112px;
+  }
 
   @include mq(desk) {
-    --card-gap: 32px;
+    padding: 269px 60px 160px;
+    margin: 0;
+  }
+
+  &:nth-child(1) {
+    background-color: var(--hero-bg-color);
+  }
+
+  &:nth-child(2) {
+    background-color: var(--second-card-color);
+  }
+
+  &:nth-child(3) {
+    background-color: var(--third-card-color);
+  }
+}
+
+.products__item {
+  &:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 280px;
+    width: 280px;
+
+    @include mq(tab) {
+      top: -158px;
+
+      height: 224px;
+      weight: 224px;
+    }
+
+    @include mq(desk) {
+      top: -281px;
+      height: 368px;
+      weight: 394px;
+    } // left: -50%;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: -140px;
+    width: 100%;
+
+    background-image: url(../images/png/products/ice-cream-mob-1x.png);
+
+    @include mq(retina) {
+      background-image: url(../images/png/products/ice-cream-desk-2x.png);
+    }
+
+    @include mq(tab) {
+      background-image: url(../images/png/products/ice-cream-tab-1x.png);
+
+      @include mq(retina) {
+        background-image: url(../images/png/products/ice-cream-tab-2x.png);
+      }
+    }
+
+    @include mq(desk) {
+      background-image: url(../images/png/products/ice-cream-desk-1x.png);
+      width: 368px;
+
+      @include mq(retina) {
+        background-image: url(../images/png/products/ice-cream-desk-2x.png);
+      }
+    }
+  }
+
+  &:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 280px;
+    width: 280px;
+
+    @include mq(tab) {
+      top: -158px;
+
+      height: 224px;
+      weight: 224px;
+    }
+
+    @include mq(desk) {
+      top: -281px;
+      height: 368px;
+      weight: 394px;
+    } // left: -50%;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: -140px;
+    width: 100%;
+
+    background-image: url(../images/png/products/ice-coffee-mob-1x.png);
+
+    @include mq(retina) {
+      background-image: url(../images/png/products/ice-coffee-desk-2x.png);
+    }
+
+    @include mq(tab) {
+      background-image: url(../images/png/products/ice-coffee-tab-1x.png);
+
+      @include mq(retina) {
+        background-image: url(../images/png/products/ice-coffee-tab-2x.png);
+      }
+    }
+
+    @include mq(desk) {
+      background-image: url(../images/png/products/ice-coffee-desk-1x.png);
+      width: 368px;
+
+      @include mq(retina) {
+        background-image: url(../images/png/products/ice-coffee-desk-2x.png);
+      }
+    }
+  }
+
+  &:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 280px;
+    width: 280px;
+
+    @include mq(tab) {
+      top: -158px;
+
+      height: 224px;
+      weight: 224px;
+    }
+
+    @include mq(desk) {
+      top: -281px;
+      height: 368px;
+      weight: 394px;
+    } // left: -50%;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: -140px;
+    width: 100%;
+
+    background-image: url(../images/png/products/milkshakes-mob-1x.png);
+
+    @include mq(retina) {
+      background-image: url(../images/png/products/milkshakes-desk-2x.png);
+    }
+
+    @include mq(tab) {
+      background-image: url(../images/png/products/milkshakes-tab-1x.png);
+
+      @include mq(retina) {
+        background-image: url(../images/png/products/milkshakes-tab-2x.png);
+      }
+    }
+
+    @include mq(desk) {
+      background-image: url(../images/png/products/milkshakes-desk-1x.png);
+      width: 368px;
+
+      @include mq(retina) {
+        background-image: url(../images/png/products/milkshakes-desk-2x.png);
+      }
+    }
   }
 }
 
@@ -82,6 +261,7 @@
   font-weight: 700;
   line-height: 1.52;
   text-align: center;
+  margin-bottom: 32px;
 
   @include mq(fab) {
     line-height: 1.65;
@@ -93,169 +273,11 @@
 
   @include mq(desk) {
     font-size: 16px;
+    margin-bottom: 60px;
   }
 }
 
-.products__item {
-  border-radius: 24px;
-  padding: 160px 40px 112px;
-  @include mq(tab) {
-    padding: 118px 32px 112px;
-  }
-
-  @include mq(desk) {
-    padding: 269px 60px 160px;
-    margin: 0;
-  }
-
-  &:nth-child(1) {
-    background-color: var(--hero-bg-color);
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: -50%;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      transform: translateX(50%);
-      top: -140px;
-      width: 100%;
-
-      background-image: url(../images/webp/products/ice-cream-mob-1x.webp);
-
-      @include mq(retina) {
-        background-image: url(../images/webp/products/ice-cream-mob-2x.webp);
-      }
-
-      @include mq(tab) {
-        background-image: url(../images/webp/products/ice-cream-tab-1x.webp);
-
-        @include mq(retina) {
-          background-image: url(../images/webp/products/ice-cream-tab-2x.webp);
-        }
-      }
-
-      @include mq(desk) {
-        background-image: url(../images/webp/products/ice-cream-desk-1x.webp);
-        width: 368px;
-
-        @include mq(retina) {
-          background-image: url(../images/webp/products/ice-cream-desk-2x.webp);
-        }
-      }
-    }
-  }
-
-  &:nth-child(2) {
-    background-color: var(--second-card-color);
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url(../images/webp/products/ice-coffee-mob-1x.webp);
-
-      @include mq(retina) {
-        background-image: url(../images/webp/products/ice-coffee-mob-2x.webp);
-      }
-
-      @include mq(tab) {
-        background-image: url(../images/webp/products/ice-coffee-tab-1x.webp);
-
-        @include mq(retina) {
-          background-image: url(../images/webp/products/ice-coffee-tab-2x.webp);
-        }
-      }
-
-      @include mq(desk) {
-        background-image: url(../images/webp/products/ice-coffee-desk-1x.webp);
-        width: 368px;
-
-        @include mq(retina) {
-          background-image: url(../images/webp/products/ice-coffee-desk-2x.webp);
-        }
-      }
-    }
-  }
-
-  &:nth-child(3) {
-    background-color: var(--third-card-color);
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url(../images/webp/products/milkshakes-mob-1x.webp);
-
-      @include mq(retina) {
-        background-image: url(../images/webp/products/milkshakes-mob-2x.webp);
-      }
-
-      @include mq(tab) {
-        background-image: url(../images/webp/products/milkshakes-tab-1x.webp);
-        background-repeat: no-repeat;
-
-        @include mq(retina) {
-          background-image: url(../images/webp/products/milkshakes-tab-2x.webp);
-        }
-      }
-
-      @include mq(desk) {
-        background-image: url(../images/webp/products/milkshakes-desk-1x.webp);
-
-        @include mq(retina) {
-          background-image: url(../images/webp/products/milkshakes-desk-2x.webp);
-        }
-      }
-    }
-  }
-
-  .products-img__btn {
-    width: 40px;
-    margin: 0 auto;
-    margin-top: 32px;
-
-    @include mq(desk) {
-      margin-top: 60px;
-    }
-  }
+.product__link {
+  display: flex;
+  justify-content: center;
 }
-
-// .products__item::before {
-//   content: '';
-//   background-image: url(../images/webp/products/ice-cream-mob-1x.webp);
-//   left: -50%;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   background-position: center;
-//   transform: translateX(50%);
-//   width: 280px;
-//   height: 280px;
-//   position: absolute;
-//   top: -140px;
-
-//   @include mq(retina) {
-//     background-image: url(../images/webp/products/ice-cream-mob-2x.webp);
-//   }
-
-//   @include mq(fab) {
-//     width: 350px;
-//   }
-
-//   @include mq(tab) {
-//     background-image: url(../images/webp/products/ice-cream-tab-1x.webp);
-//     width: 224px;
-//     top: -165px;
-
-//     @include mq(retina) {
-//       background-image: url(../images/webp/products/ice-cream-tab-2x.webp);
-//     }
-//   }
-
-//   @include mq(desk) {
-//     background-image: url(../images/webp/products/ice-cream-desk-1x.webp);
-//     width: 368px;
-//     top: -185px;
-
-//     @include mq(retina) {
-//       background-image: url(../images/webp/products/ice-cream-desk-2x.webp);
-//     }
-//   }
-// }
