@@ -27,6 +27,7 @@
   flex-direction: column;
   margin-bottom: 10px;
 }
+
 .label {
   display: block;
   margin-bottom: 4px;
@@ -96,13 +97,14 @@
     color: var(--title-color);
   }
 }
+
 .modal {
   max-width: 450px;
   padding: 40px;
 
   background: #fff5f6;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 22px;
 
   transition: transform var(--transition), visibility var(--transition);
@@ -155,6 +157,7 @@
     fill: var(--accent-color);
   }
 }
+
 .policy {
   display: flex;
   justify-content: center;
@@ -199,10 +202,12 @@
     border-color: var(--accent-color);
   }
 }
+
 .modal__btn {
   margin-left: auto;
   min-width: 200px;
   min-height: 50px;
+
   &.btn__link--pink {
     margin-right: auto;
     font-size: 16px;
