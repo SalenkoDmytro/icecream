@@ -1,4 +1,4 @@
-.nav {
+.site-nav {
   display: none;
   @include mq(desk) {
     display: flex;
@@ -24,3 +24,8 @@
   }
 }
 
+.site-nav__list {
+  @include mq(desk) {
+    display: flex;
+  }
+}
