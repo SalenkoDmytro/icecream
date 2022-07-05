@@ -21,7 +21,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: var(--title-color);
+  color: var(--pretitle-color);
 
   @include mq(fab) {
     font-size: 22px;
@@ -44,14 +44,8 @@
   margin-bottom: 32px;
   margin-right: auto;
   margin-left: auto;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.147;
 
   letter-spacing: 0.04em;
-  text-transform: uppercase;
-
-  color: var(--accent-color);
 
   @include mq(mob-only) {
     max-width: 200px;
@@ -104,6 +98,19 @@
       background-image: url(../images/png/about/milk-mob-2x.png);
       background-repeat: no-repeat;
       background-position: 50% 35%;
+      background-size: contain;
+    }
+  }
+  @include mq(fab-only) {
+    background-image: url(../images/png/about/milk-mob-1x.png);
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    background-size: contain;
+
+    @include mq(retina) {
+      background-image: url(../images/png/about/milk-mob-2x.png);
+      background-repeat: no-repeat;
+      background-position: 50% 30%;
       background-size: contain;
     }
   }
