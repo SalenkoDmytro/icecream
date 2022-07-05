@@ -1,1 +1,26 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  padding: 90px 15px;
+  overflow-y: scroll;
+  z-index: 2;
 
+  background-color: #00000033;
+
+  transition: opacity var(--transition), visibility var(--transition);
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    & .modal {
+      transform: translate(-50%, -50%) scale(0.5);
+      visibility: hidden;
+    }
+  }
+}
