@@ -23,7 +23,7 @@
   text-transform: uppercase;
   font-size: 18px;
   line-height: 1.16;
-  color: var(--title-color);
+  color: var(--pretitle-color);
   margin-bottom: 40px;
   @include mq(tab) {
     max-width: 340px;
