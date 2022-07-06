@@ -20,7 +20,7 @@
 
 .gallery__list {
   display: grid;
-  align-items: center;
+  justify-content: center;
   gap: 2px;
   grid-template-rows: repeat(7, 1fr);
   grid-template-rows: auto;
