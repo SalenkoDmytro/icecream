@@ -40,3 +40,16 @@ if (animItems.length > 0) {
     animOnScroll();
   }, 300);
 }
+
+document.querySelectorAll('button').forEach(function (el) {
+  el.addEventListener(
+    'click',
+    function () {
+      if (!this.dataset.secondname) return;
+      var tmp = this.innerHTML;
+      this.innerHTML = this.dataset.secondname;
+      this.dataset.secondname = tmp;
+    },
+    false
+  );
+});
