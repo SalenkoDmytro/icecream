@@ -1,5 +1,36 @@
 .about {
   background: var(--second-br-color);
+
+  @include mq(mob-only) {
+    background-image: url(../images/png/about/milk-left-1x.png),
+      url(../images/png/about/milk-right-1x.png);
+    background-repeat: no-repeat;
+    background-position: left 20px top 555px, right 20px top 555px;
+    // background-size: 325px;
+    background-size: 220px, 230px;
+    @include mq(retina) {
+      background-image: url(../images/png/about/milk-left-2x.png),
+        url(../images/png/about/milk-right-2x.png);
+      background-position: left 20px top 555px, right 20px top 555px;
+      background-size: 220px, 230px;
+    }
+  }
+
+  @include mq(fab-only) {
+    background-image: url(../images/png/about/milk-left-1x.png),
+      url(../images/png/about/milk-right-1x.png);
+    background-repeat: no-repeat;
+    background-position: left 20px top 650px, right 0px top 650px;
+    // background-size: 325px;
+    background-size: 250px, 270px;
+    @include mq(retina) {
+      background-image: url(../images/png/about/milk-left-2x.png),
+        url(../images/png/about/milk-right-2x.png);
+      background-position: left 20px top 650px, right 0px top 650px;
+      background-size: 250px, 270px;
+    }
+  }
+
   @include mq(desk) {
     background-image: url(../images/png/about/milk-left-1x.png),
       url(../images/png/about/milk-right-1x.png);
@@ -86,32 +117,32 @@
 }
 
 .about-box__text {
-  @include mq(mob-only) {
-    background-image: url(../images/png/about/milk-mob-1x.png);
-    background-repeat: no-repeat;
-    background-position: 50% 35%;
-    background-size: contain;
+  // @include mq(mob-only) {
+  //   background-image: url(../images/png/about/milk-mob-1x.png);
+  //   background-repeat: no-repeat;
+  //   background-position: 50% 35%;
+  //   background-size: contain;
 
-    @include mq(retina) {
-      background-image: url(../images/png/about/milk-mob-2x.png);
-      background-repeat: no-repeat;
-      background-position: 50% 35%;
-      background-size: contain;
-    }
-  }
-  @include mq(fab-only) {
-    background-image: url(../images/png/about/milk-mob-1x.png);
-    background-repeat: no-repeat;
-    background-position: 50% 35%;
-    background-size: contain;
+  //   @include mq(retina) {
+  //     background-image: url(../images/png/about/milk-mob-2x.png);
+  //     background-repeat: no-repeat;
+  //     background-position: 50% 35%;
+  //     background-size: contain;
+  //   }
+  // }
+  // @include mq(fab-only) {
+  //   background-image: url(../images/png/about/milk-mob-1x.png);
+  //   background-repeat: no-repeat;
+  //   background-position: 50% 35%;
+  //   background-size: contain;
 
-    @include mq(retina) {
-      background-image: url(../images/png/about/milk-mob-2x.png);
-      background-repeat: no-repeat;
-      background-position: 50% 30%;
-      background-size: contain;
-    }
-  }
+  //   @include mq(retina) {
+  //     background-image: url(../images/png/about/milk-mob-2x.png);
+  //     background-repeat: no-repeat;
+  //     background-position: 50% 30%;
+  //     background-size: contain;
+  //   }
+  // }
 
   @include mq(desk) {
     padding-top: 90px;
