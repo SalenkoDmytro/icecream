@@ -8,6 +8,9 @@
   align-items: center;
 }
 .slide__container {
+  @include mq(mob-only) {
+    width: 100%;
+  }
   @include mq(desk) {
     width: 100%;
   }
@@ -66,7 +69,9 @@
 }
 .locations__frame {
   border-radius: 20px;
-
+  @include mq(mob-only) {
+    width: 100%;
+  }
   @include mq(fab) {
     width: 80%;
     margin-left: auto;

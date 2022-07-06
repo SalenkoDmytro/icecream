@@ -221,8 +221,20 @@
 }
 
 .about__text--forth.text-open {
-  height: auto;
+  @include mq(mob-only) {
+    height: 95px;
+  }
+  @include mq(fab-only) {
+    height: 67px;
+  }
+  @include mq(tab-only) {
+    height: 90px;
+  }
+  @include mq(desk) {
+    height: 76px;
+  }
   overflow: visible;
+  transition: height var(--transition), overflow var(--transition);
   //   opacity: 0;
 }
 .about__text--forth {
