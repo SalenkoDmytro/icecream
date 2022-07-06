@@ -172,7 +172,9 @@
     }
   }
   &--bottom {
-    padding-bottom: 30px;
+    @include mq(mob-only) {
+      padding-bottom: 30px;
+    }
   }
   &:hover,
   &:focus {
