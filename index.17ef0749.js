@@ -1,0 +1,2 @@
+const e={header:document.querySelector("[data-header]"),links:document.querySelectorAll('nav ul a[href^="#"]')};e.links.forEach((t=>{t.addEventListener("click",(function(t){t.preventDefault();let o=this.getAttribute("href").substring(1);const n=document.getElementById(o),l=e.header.offsetHeight,r=n.getBoundingClientRect().top-l;window.scrollBy({top:r,behavior:"smooth"})}))})),$(window).on("scroll",(function(){$(e.header).toggleClass("fixed",$(this).scrollTop()>$(".hero__section").height())}));
+//# sourceMappingURL=index.17ef0749.js.map
